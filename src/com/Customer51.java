@@ -21,12 +21,12 @@ public class Customer51
 		  System.out.println("Enter the Customer city");
 		  String cCity=sc.nextLine();
 		  Connection con=DriverManager.getConnection
-				  ("jdbc:oracle:thin:@localhost:1521:orcl","system","abc");
+				  ("jdbc:oracle:thin:@localhost:1521:xe","system","abc");
 		  Statement stm=con.createStatement();
-		     int k=stm.executeUpdate("insert into customer51 values('"+cid+"','"+cName+"','"+cmid+"','"+cCity+"')");
+		     int k=stm.executeUpdate("insert into customer values('"+cid+"','"+cName+"','"+cmid+"','"+cCity+"')");
 		       if(k>0)
 		       {
-		    	    System.out.println("Customer51 data updata successfully....");
+		    	    System.out.println("Customer data updata successfully....");
 		       }
 		  
 		   
